@@ -1,63 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Шилова Варвара Васильевна - Резюме</title>
-    <style type="text/css">
-  body {
-font-family: Georgia, "Times New Roman",
-          Times, serif;
-    color: black;
- background-image: url(https://i.pinimg.com/control/564x/5e/ce/62/5ece624aea8b57e969a9d82bcea1ab6a.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;  
-}
-h1 {
-    font-family: Helvetica, Geneva, Arial,
-          SunSans-Regular, sans-serif }
-  </style>
+    <style>
+        body {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            color: black;
+            background-image: url(https://i.pinimg.com/control/564x/cc/37/0a/cc370a35f9243698d884ec0ff0d4da34.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tabs button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .tabs button:hover {
+            background: #0056b3;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <header>
-<h1>РЕЗЮМЕ <h1>
-        <h1>Шилова Варвара Васильевна 18 лет г. Санкт-Петербург</h1>
-        <p>Контактная информация: varya.shilova2209@mail.ru, телефон: +79519475394</p>
-    </header>
-    
-    <main>
-        <section>
-            <h2>Образование</h2>
-            <p> Физико-математический Лицей №1 г. Пермь, 2013-2022гг</p>
-            <p> Лицей НИУ ВШЭ г. Пермь, 2022-2024гг <p>
-            <p> Бакалавр Прикладная математика и информатика НИУ ВШЭ г. Санкт-Петербург, 2024 - ???<p>
-        </section>
+    <div class="container">
+        <header>
+            <h1>РЕЗЮМЕ</h1>
+            <h1>Шилова Варвара Васильевна, 18 лет, г. Санкт-Петербург</h1>
+            <p>Контактная информация: varya.shilova2209@mail.ru, телефон: +79519475394</p>
+        </header>
 
-        <section>
-            <h2>Опыт работы</h2>
-            <p>Официант, Паста-бар "Пастырь", 2 дня</p>
-            <p>Бариста, Кофейня "Barberry", 1 месяц </p>
-            <p>Ресселер, Авито, 2 года </p>
-        </section>
+        <div class="tabs">
+            <button onclick="showTab('education')">Образование</button>
+            <button onclick="showTab('experience')">Опыт работы</button>
+            <button onclick="showTab('skills')">Навыки</button>
+            <button onclick="showTab('achievements')">Достижения</button>
+        </div>
 
-        <section>
-            <h2>Навыки</h2>
-            <ul>
-                <li>Навык 1: Писала раньше на Python, но сейчас уже наверно все забыла </li>
-                <li>Навык 2: Что-то могу написать на C++</li>
-                <li>Навык 3: Делаю красивые презентации в PowerPoint 2013</li>
-                
-            </ul>
-        </section>
+        <main>
+            <section id="education" class="tab-content active">
+                <h2>Образование</h2>
+                <p>Физико-математический Лицей №1 г. Пермь, 2013-2022гг</p>
+                <p>Лицей НИУ ВШЭ г. Пермь, 2022-2024гг</p>
+                <p>Бакалавр Прикладная математика и информатика НИУ ВШЭ г. Санкт-Петербург, 2024 - ???</p>
+            </section>
 
-        <section>
-            <h2>Достижения</h2>
-            <p>Подготовилась к ЕГЭ по информатике за месяц </p>
-            <p>В последнем контесте закрыла все must have <p>
-        </section>
-    </main>
+            <section id="experience" class="tab-content">
+                <h2>Опыт работы</h2>
+                <p>Официант, Паста-бар "Пастырь", 2 дня</p>
+                <p>Бариста, Кофейня "Barberry", 1 месяц</p>
+                <p>Ресселер, Авито, 2 года</p>
+            </section>
+
+            <section id="skills" class="tab-content">
+                <h2>Навыки</h2>
+                <ul>
+                    <li>Писала раньше на Python, но сейчас уже наверно все забыла</li>
+                    <li>Что-то могу написать на C++</li>
+                    <li>Делаю красивые презентации в PowerPoint 2013</li>
+                </ul>
+            </section>
+
+            <section id="achievements" class="tab-content">
+                <h2>Достижения</h2>
+                <p>Подготовилась к ЕГЭ по информатике за месяц</p>
+                <p>В последнем контесте закрыла все must have</p>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+        }
+    </script>
 </body>
 </html>
